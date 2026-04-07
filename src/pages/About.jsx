@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import './About.css';
 
 const VALUES = [
-  { icon: '🎯', title: 'Client-First', desc: 'Your success is our success. We treat every project as a partnership, not a transaction.' },
-  { icon: '⚡', title: 'Innovation', desc: 'We stay ahead of the curve with cutting-edge technologies and modern development practices.' },
-  { icon: '🛡️', title: 'Quality', desc: 'Clean code, rigorous testing, and best practices. We build software that lasts.' },
-  { icon: '🤝', title: 'Transparency', desc: 'Open communication, honest timelines, and no surprises. You always know where your project stands.' },
+  { icon: '💡', title: 'Creativity First', desc: 'We believe great software starts with imagination. Every project begins with asking "what if?" — not just "how?"' },
+  { icon: '🤝', title: 'Human-Centered', desc: 'Technology should serve people, not the other way around. We build solutions that are intuitive, accessible, and meaningful.' },
+  { icon: '🌱', title: 'Grow Together', desc: 'Your growth is our mission. From students to startups to seniors — we meet you where you are and help you reach further.' },
+  { icon: '🔧', title: 'Built to Last', desc: 'We don\'t cut corners. Clean code, modern architecture, and thoughtful design — because your project deserves our best work.' },
 ];
 
-const TEAM = [
-  { name: 'Avika S.', role: 'Founder & CEO', bio: 'Visionary leader with 10+ years in software consulting and digital strategy.' },
-  { name: 'Raj Patel', role: 'CTO', bio: 'Full-stack architect specializing in scalable cloud-native applications.' },
-  { name: 'Maya Chen', role: 'Lead Designer', bio: 'Award-winning UX designer passionate about creating intuitive digital experiences.' },
-  { name: 'Alex Kumar', role: 'Engineering Lead', bio: 'Expert in DevOps, microservices, and building high-performance systems.' },
+const BELIEFS = [
+  { icon: '🧠', title: 'AI for Good', desc: 'We integrate AI to empower people — automating the mundane so humans can focus on what matters most.' },
+  { icon: '📚', title: 'Education & Access', desc: 'We\'re passionate about making technology accessible to students, learners, and underserved communities.' },
+  { icon: '👴', title: 'Inclusive by Design', desc: 'From seniors to first-time users, we design with empathy — because everyone deserves great digital experiences.' },
+  { icon: '🌍', title: 'Impact Over Profit', desc: 'We choose projects that make a difference. Real solutions for real people — that\'s what gets us out of bed.' },
 ];
 
 const About = () => {
@@ -23,50 +23,53 @@ const About = () => {
       <section className="about-hero">
         <div className="section-container" style={{ textAlign: 'center' }}>
           <span className="section-label">About Us</span>
-          <h1 className="section-title" style={{ maxWidth: 700, margin: '0 auto 20px' }}>
-            Building the <span className="text-gradient">Future of Software</span>
+          <h1 className="section-title" style={{ maxWidth: 750, margin: '0 auto 20px' }}>
+            Where <span className="text-gradient">Technology</span> Meets <span className="text-gradient">Humanity</span>
           </h1>
-          <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            We're a team of passionate developers, designers, and strategists helping businesses
-            succeed in the digital age.
+          <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: 650 }}>
+            We're not just building software — we're building tools that help people create, connect, learn, and grow.
           </p>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Our Story */}
       <section className="section">
         <div className="section-container">
           <div className="about-story-grid">
             <div>
               <span className="section-label">Our Story</span>
-              <h2 className="section-title">From Vision to <span className="text-gradient">Reality</span></h2>
+              <h2 className="section-title">Born from a <span className="text-gradient">Simple Idea</span></h2>
               <p className="about-story-text">
-                Avika Ventures was founded with a simple belief: every business deserves access to
-                world-class software development. We started as a small team of passionate developers
-                and have grown into a full-service development company serving clients across industries.
+                Avika Ventures started with a question: what if technology could be built with the same care
+                and creativity as art? We saw too many businesses struggling with cookie-cutter solutions that
+                didn't fit — and too many people underserved by the tech industry.
               </p>
               <p className="about-story-text">
-                Today, we combine technical excellence with creative problem-solving to deliver
-                solutions that truly make a difference. Whether you're a startup launching your first
-                product or an enterprise modernizing legacy systems, we're here to help.
+                So we set out to do things differently. Our first project, <a href="https://saatsaheli.com" target="_blank" rel="noopener noreferrer" style={{ color: '#eab308' }}>SaatSaheli</a>,
+                is a creative platform for writers, artists, and readers — a place where technology enables human
+                expression. It's proof of what we believe: that the best software comes from understanding people first,
+                and writing code second.
+              </p>
+              <p className="about-story-text">
+                Today, we bring that same philosophy to every project we take on — whether it's a business website,
+                a mobile app, an AI-powered tool, or a platform that helps seniors stay connected with their families.
               </p>
             </div>
-            <div className="about-story-stats">
-              <div className="about-stat-card">
-                <span className="about-stat-value">5+</span>
-                <span className="about-stat-label">Years in Business</span>
+            <div className="about-story-visual">
+              <div className="about-highlight-card">
+                <span className="about-highlight-emoji">🚀</span>
+                <h3>What We Build</h3>
+                <p>Websites, mobile apps, SaaS platforms, AI tools, cloud infrastructure, and custom software — from idea to launch and beyond.</p>
               </div>
-              <div className="about-stat-card">
-                <span className="about-stat-value">150+</span>
-                <span className="about-stat-label">Projects Delivered</span>
+              <div className="about-highlight-card">
+                <span className="about-highlight-emoji">❤️</span>
+                <h3>Who We Build For</h3>
+                <p>Students, startups, small businesses, enterprises, seniors, creators, educators — anyone with a vision and a desire to grow.</p>
               </div>
-              <div className="about-stat-card">
-                <span className="about-stat-value">20+</span>
-                <span className="about-stat-label">Team Members</span>
-              </div>
-              <div className="about-stat-card">
-                <span className="about-stat-value">12</span>
-                <span className="about-stat-label">Countries Served</span>
+              <div className="about-highlight-card">
+                <span className="about-highlight-emoji">⚡</span>
+                <h3>How We Build</h3>
+                <p>Modern tech stack, agile approach, transparent communication, and a relentless focus on quality and user experience.</p>
               </div>
             </div>
           </div>
@@ -90,32 +93,55 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* What We Believe */}
       <section className="section">
         <div className="section-container" style={{ textAlign: 'center' }}>
-          <span className="section-label">Our Team</span>
-          <h2 className="section-title">Meet the <span className="text-gradient">People</span> Behind the Code</h2>
-          <div className="grid-4" style={{ marginTop: 48 }}>
-            {TEAM.map((m, i) => (
-              <div key={i} className="card team-card">
-                <div className="team-avatar">{m.name.charAt(0)}</div>
-                <h3 className="team-name">{m.name}</h3>
-                <span className="team-role">{m.role}</span>
-                <p className="team-bio">{m.bio}</p>
+          <span className="section-label">Our Beliefs</span>
+          <h2 className="section-title">Technology with <span className="text-gradient">Purpose</span></h2>
+          <p className="section-subtitle" style={{ margin: '0 auto 48px' }}>
+            We don't just write code — we build with intention.
+          </p>
+          <div className="grid-4">
+            {BELIEFS.map((b, i) => (
+              <div key={i} className="card belief-card">
+                <span className="belief-icon">{b.icon}</span>
+                <h3 className="belief-title">{b.title}</h3>
+                <p className="belief-desc">{b.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section" style={{ background: 'var(--bg-dark)', textAlign: 'center' }}>
-        <div className="section-container">
-          <h2 className="section-title">Want to Join Our Team?</h2>
-          <p className="section-subtitle" style={{ margin: '0 auto 36px' }}>
-            We're always looking for talented people. Check out our open positions.
+      {/* Featured Project */}
+      <section className="section" style={{ background: 'var(--bg-dark)' }}>
+        <div className="section-container" style={{ textAlign: 'center' }}>
+          <span className="section-label">Our Work in Action</span>
+          <h2 className="section-title">Building <span className="text-gradient">SaatSaheli</span></h2>
+          <p className="section-subtitle" style={{ margin: '0 auto 36px', maxWidth: 650 }}>
+            Our flagship project — a creative platform where writers publish books, artists share their work,
+            communities connect through chat, and AI helps bring ideas to life. Built with React, Spring Boot,
+            PostgreSQL, and integrated AI services.
           </p>
-          <Link to="/contact" className="btn btn-primary">Get in Touch</Link>
+          <a href="https://saatsaheli.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ background: 'linear-gradient(135deg, #eab308, #f59e0b)' }}>
+            Visit SaatSaheli.com
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section" style={{ textAlign: 'center' }}>
+        <div className="section-container">
+          <h2 className="section-title">Have a Vision? <span className="text-gradient">Let's Build It.</span></h2>
+          <p className="section-subtitle" style={{ margin: '0 auto 36px' }}>
+            Whether you're a student with a project idea, a startup ready to launch, or a business looking to grow —
+            we'd love to hear from you.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <Link to="/contact" className="btn btn-primary">Start a Conversation</Link>
+            <a href="mailto:avikaventures.info@gmail.com" className="btn btn-outline">avikaventures.info@gmail.com</a>
+          </div>
         </div>
       </section>
     </div>

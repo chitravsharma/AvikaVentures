@@ -1,5 +1,5 @@
 .contact-hero {
-  padding: 160px 24px 80px; background: var(--bg-darker); position: relative;
+  padding: 110px 24px 8px; background: var(--bg-darker); position: relative;
 }
 .contact-hero::before {
   content: ''; position: absolute; inset: 0;

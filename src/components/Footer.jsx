@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <Logo size={32} />
+              <Logo height={44} />
               <span className="footer-logo-text">Avika Ventures</span>
             </div>
             <p className="footer-desc">
@@ -31,25 +31,30 @@ const Footer = () => {
 
           <div className="footer-links-group">
             <h4 className="footer-links-title">Services</h4>
-            <Link to="/services" className="footer-link">Web Development</Link>
+            <Link to="/services" className="footer-link">Website Development</Link>
+            <Link to="/services" className="footer-link">Software Development</Link>
             <Link to="/services" className="footer-link">Mobile Apps</Link>
-            <Link to="/services" className="footer-link">Cloud Solutions</Link>
-            <Link to="/services" className="footer-link">UI/UX Design</Link>
+            <Link to="/services" className="footer-link">AI & Automation</Link>
+            <Link to="/services" className="footer-link">Cloud & DevOps</Link>
           </div>
 
           <div className="footer-links-group">
             <h4 className="footer-links-title">Company</h4>
             <Link to="/about" className="footer-link">About Us</Link>
-            <Link to="/services" className="footer-link">Our Work</Link>
-            <Link to="/contact" className="footer-link">Careers</Link>
             <Link to="/contact" className="footer-link">Contact</Link>
           </div>
 
           <div className="footer-links-group">
+            <h4 className="footer-links-title">Projects</h4>
+            <a href="https://saatsaheli.com" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <img src="/saatsaheli-logo.png" alt="SaatSaheli" style={{ width: 20, height: 20, borderRadius: 4 }} />
+              SaatSaheli.com
+            </a>
+          </div>
+
+          <div className="footer-links-group">
             <h4 className="footer-links-title">Contact</h4>
-            <a href="mailto:info@avikaventures.com" className="footer-link">info@avikaventures.com</a>
-            <span className="footer-link">+1 (555) 123-4567</span>
-            <span className="footer-link">San Francisco, CA</span>
+            <a href="mailto:avikaventures.info@gmail.com" className="footer-link">avikaventures.info@gmail.com</a>
           </div>
         </div>
 

@@ -2,13 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-const STATS = [
-  { value: '150+', label: 'Projects Delivered' },
-  { value: '50+', label: 'Happy Clients' },
-  { value: '5+', label: 'Years Experience' },
-  { value: '99%', label: 'Client Satisfaction' },
-];
-
 const SERVICES_PREVIEW = [
   {
     icon: (
@@ -73,7 +66,9 @@ const Home = () => {
           <div className="hero-content">
             <span className="hero-badge">Software & Web Development</span>
             <h1 className="hero-title">
-              We Build <span className="text-gradient">Digital Products</span> That Drive Growth
+              We Build<br />
+              <span className="text-gradient">Digital Products</span><br />
+              That Drive Growth
             </h1>
             <p className="hero-subtitle">
               Avika Ventures is a full-service software development company crafting
@@ -98,7 +93,6 @@ const Home = () => {
             digital products",
   stack: ["React", "Node.js",
           "Cloud", "AI"],
-  clients: "150+ delivered",
   approach: "Agile & Modern"
 };
 
@@ -108,18 +102,30 @@ avikaVentures.start();
               </pre>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="stats-bar">
-        <div className="stats-container">
-          {STATS.map((stat, i) => (
-            <div key={i} className="stat-item">
-              <span className="stat-value">{stat.value}</span>
-              <span className="stat-label">{stat.label}</span>
-            </div>
-          ))}
+          <div className="hero-projects">
+            <h3 className="hero-projects-title">Featured Projects</h3>
+            <a href="https://saatsaheli.com" target="_blank" rel="noopener noreferrer" className="hero-project-card saatsaheli-card">
+              <div className="saatsaheli-header">
+                <img src="/saatsaheli-logo.png" alt="SaatSaheli" className="saatsaheli-logo" />
+                <div>
+                  <h4>SaatSaheli</h4>
+                  <span className="saatsaheli-tagline">Be Your True Self</span>
+                </div>
+              </div>
+              <div className="project-tag" style={{ background: 'rgba(234,179,8,0.15)', color: '#eab308' }}>Live Project</div>
+              <p>A creative platform for writers, readers, and artists — featuring book publishing, community chat, magazines, and AI-powered content tools.</p>
+              <div className="project-tech">
+                <span>React</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+                <span>AI</span>
+              </div>
+              <span className="project-link" style={{ color: '#eab308' }}>
+                saatsaheli.com
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -203,8 +209,8 @@ avikaVentures.start();
             <Link to="/contact" className="btn btn-primary" style={{ padding: '16px 40px', fontSize: '1.05rem' }}>
               Get Started Today
             </Link>
-            <a href="mailto:info@avikaventures.com" className="btn btn-outline">
-              info@avikaventures.com
+            <a href="mailto:avikaventures.info@gmail.com" className="btn btn-outline">
+              avikaventures.info@gmail.com
             </a>
           </div>
         </div>

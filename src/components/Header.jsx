@@ -27,10 +27,10 @@ const Header = () => {
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/" className="header-logo">
-          <Logo size={36} />
+          <Logo height={72} />
           <div className="header-brand">
             <span className="header-brand-name">Avika Ventures</span>
-            <span className="header-brand-tagline">Software & Web Development</span>
+            <span className="header-brand-tagline">Innovate. Build. Grow.</span>
           </div>
         </Link>
 
