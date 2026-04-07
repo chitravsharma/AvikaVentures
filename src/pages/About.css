@@ -1,0 +1,46 @@
+.about-hero {
+  padding: 160px 24px 80px; background: var(--bg-darker); position: relative;
+}
+.about-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(6,182,212,0.1) 0%, transparent 60%);
+}
+.about-story-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.about-story-text {
+  color: var(--text-secondary); font-size: 1rem; line-height: 1.8; margin-bottom: 16px;
+}
+.about-story-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.about-stat-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px; text-align: center;
+}
+.about-stat-value {
+  display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.about-stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+
+.value-card { text-align: center; padding: 24px 16px; }
+.value-icon { font-size: 2.2rem; display: block; margin-bottom: 16px; }
+.value-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+.value-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+
+.team-card { text-align: center; }
+.team-avatar {
+  width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px;
+  background: var(--gradient-primary); display: flex;
+  align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 700; color: #fff;
+}
+.team-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.team-role { font-size: 0.82rem; color: var(--accent); font-weight: 500; display: block; margin-bottom: 12px; }
+.team-bio { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .about-story-grid { grid-template-columns: 1fr; gap: 40px; }
+}
