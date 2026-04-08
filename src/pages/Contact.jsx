@@ -1,7 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Contact.css';
 
 const Contact = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#contact-form') {
+      const el = document.getElementById('contact-form');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        const firstInput = el.querySelector('input');
+        if (firstInput) firstInput.focus({ preventScroll: true });
+      }
+    }
+  }, [location]);
   const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', budget: '', message: '' });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -50,7 +63,7 @@ const Contact = () => {
         <div className="section-container">
           <div className="contact-grid">
             {/* Form */}
-            <div className="contact-form-card">
+            <div id="contact-form" className="contact-form-card">
               {sent ? (
                 <div className="contact-sent">
                   <div className="contact-sent-icon">

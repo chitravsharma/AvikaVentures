@@ -33,24 +33,6 @@ const SERVICES_PREVIEW = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    text: "Avika Ventures transformed our outdated platform into a modern, high-performance web application. Their team's expertise is unmatched.",
-    name: 'Sarah Chen',
-    role: 'CTO, TechFlow Inc.',
-  },
-  {
-    text: "From concept to launch, they delivered our mobile app 2 weeks ahead of schedule. Outstanding communication throughout.",
-    name: 'Marcus Rivera',
-    role: 'Founder, LaunchPad',
-  },
-  {
-    text: "Their cloud migration strategy saved us 40% on infrastructure costs while improving uptime to 99.99%.",
-    name: 'Priya Sharma',
-    role: 'VP Engineering, DataSync',
-  },
-];
-
 const TECH_STACK = [
   'React', 'Node.js', 'Python', 'AWS', 'Docker', 'PostgreSQL',
   'TypeScript', 'Next.js', 'Flutter', 'Kubernetes', 'MongoDB', 'GraphQL',
@@ -173,30 +155,6 @@ avikaVentures.start();
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section">
-        <div className="section-container">
-          <span className="section-label">Testimonials</span>
-          <h2 className="section-title">What Our <span className="text-gradient">Clients</span> Say</h2>
-          <div className="grid-3" style={{ marginTop: 48 }}>
-            {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="card testimonial-card">
-                <div className="testimonial-stars">
-                  {'★★★★★'}
-                </div>
-                <p className="testimonial-text">"{t.text}"</p>
-                <div className="testimonial-author">
-                  <div className="testimonial-avatar">{t.name.charAt(0)}</div>
-                  <div>
-                    <div className="testimonial-name">{t.name}</div>
-                    <div className="testimonial-role">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="cta-section">
@@ -206,7 +164,7 @@ avikaVentures.start();
             Let's discuss your project and find the perfect solution for your business.
           </p>
           <div className="cta-actions">
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '16px 40px', fontSize: '1.05rem' }}>
+            <Link to="/contact#contact-form" className="btn btn-primary" style={{ padding: '16px 40px', fontSize: '1.05rem' }}>
               Get Started Today
             </Link>
             <a href="mailto:avikaventures.info@gmail.com" className="btn btn-outline">

@@ -128,18 +128,6 @@
   color: var(--primary-light); font-size: 0.9rem; font-weight: 600;
 }
 
-/* Testimonials */
-.testimonial-stars { color: #f59e0b; font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
-.testimonial-text { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
-.testimonial-author { display: flex; align-items: center; gap: 12px; }
-.testimonial-avatar {
-  width: 40px; height: 40px; border-radius: 50%;
-  background: var(--gradient-primary); display: flex;
-  align-items: center; justify-content: center;
-  font-weight: 700; font-size: 0.9rem; color: #fff;
-}
-.testimonial-name { font-weight: 600; font-size: 0.9rem; }
-.testimonial-role { font-size: 0.8rem; color: var(--text-muted); }
 
 /* CTA */
 .cta-section {
