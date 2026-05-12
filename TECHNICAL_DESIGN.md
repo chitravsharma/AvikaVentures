@@ -45,7 +45,7 @@ Last revised: 2026-05-12.
 | Styling | Plain CSS, one file per component | No Tailwind, no CSS-in-JS |
 | Forms | Formspree (`@formspree/react`) | No backend needed |
 | Analytics | Google Analytics 4 via `gtag.js` | |
-| Hosting | Netlify | Free tier; auto-deploy on `avikaventures.v01` push |
+| Hosting | Netlify | Free tier; auto-publish LOCKED — pushes trigger builds but require manual publish click |
 | Node | 20 LTS pinned via `.nvmrc` | CRA 5 build hangs on Node 25 |
 
 ---
@@ -174,13 +174,13 @@ to `Content-Security-Policy` to enforce.
 
 ## 8. Deployment
 
-- **Hosting:** Netlify (auto-deploy enabled on `avikaventures.v01`)
+- **Hosting:** Netlify
 - **Build command:** `npm run build` (Netlify-provided)
 - **Publish directory:** `build/`
 - **Node version:** 20 (pinned via `.nvmrc`; CRA 5 hangs on Node 25)
-- **Deploy trigger:** push to `avikaventures.v01` → ~2–3 min build → live
-
-Manual deploy (if ever needed): Netlify dashboard → Deploys → Trigger deploy.
+- **Auto-publish:** **LOCKED (since 2026-05-12).** Pushes to `avikaventures.v01` still trigger a build, but the result does NOT auto-promote to `avikaventures.com`. Must be manually published.
+- **To publish a build:** Netlify dashboard → site → **Deploys** tab → find the latest successful build → **⋯** menu → **Publish deploy**.
+- **To re-enable auto-publish:** Site configuration → Build & deploy → Continuous deployment → Build settings → **"Start auto publishing"**.
 
 ---
 
@@ -222,8 +222,9 @@ in a real terminal.
 
 ## 11. Operational reminders
 
-- **Never auto-deploy from `main`** — only `avikaventures.v01` is wired
-  to Netlify auto-publish.
+- **Only `avikaventures.v01` builds on Netlify.** Pushes to `main` don't
+  trigger anything. Auto-publish is currently LOCKED (see §8) — a build
+  succeeding does NOT make it live; manual publish required.
 - **GA4 `G-EH3R5CJ10S` is the canonical ID.** Hardcoded in two places:
   `public/index.html` (gtag bootstrap) and `src/App.js` (RouteTracker).
   Keep in sync.
