@@ -1,0 +1,38 @@
+# Hashed static assets (CRA outputs content-hashed filenames in /static/) — immutable
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Other long-lived assets (logos, OG image, manifest, favicon)
+/AvikaV.jpg
+  Cache-Control: public, max-age=604800
+/AvikaVenturesOG.jpg
+  Cache-Control: public, max-age=604800
+/logo192.png
+  Cache-Control: public, max-age=604800
+/logo512.png
+  Cache-Control: public, max-age=604800
+/saatsaheli-logo.png
+  Cache-Control: public, max-age=604800
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+# HTML and crawler files — revalidate often, never stale
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+# Security headers applied to every response
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://formspree.io https://*.formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
