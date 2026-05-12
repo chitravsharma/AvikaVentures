@@ -15,6 +15,10 @@
   Cache-Control: public, max-age=604800
 /favicon.ico
   Cache-Control: public, max-age=604800
+/favicon-32x32.png
+  Cache-Control: public, max-age=604800
+/favicon-16x16.png
+  Cache-Control: public, max-age=604800
 /manifest.json
   Cache-Control: public, max-age=3600
 
